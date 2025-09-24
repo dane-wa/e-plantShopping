@@ -293,7 +293,7 @@ function ProductList({ onHomeClick }) {
                     {plantsArray.map((category, index) => (
                         <div key={index}>
                             <h1>
-                                <div>{category.category}</div>
+                                <div className='product-category'>{category.category}</div>
                             </h1>
                             <div className='product-list'>
                                 {category.plants.map((plant, plantIndex) => (
@@ -305,7 +305,7 @@ function ProductList({ onHomeClick }) {
                                         />
                                         <div className='product-title'>{plant.name}</div>
                                         <div className='product-description'>{plant.description}</div>
-                                        <div className='product-cost'>${plant.cost}</div>
+                                        <div className='product-cost'>{plant.cost}</div>
                                         <button 
                                         className='product-button'
                                         onClick={() => handleAddToCart(plant)}
